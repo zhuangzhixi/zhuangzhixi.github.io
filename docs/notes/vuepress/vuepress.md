@@ -3,37 +3,26 @@
 > BruceBlog 从无到有的全过程
 >
 > [VuePress 官网传送门](https://vuepress.vuejs.org/zh/)
+>
+> 原博客：[别人的项目](https://brucecai55520.gitee.io/bruceblog/notes/vuepress/vuepress.html#%E4%BD%93%E9%AA%8C-vuepress)本人的部分标注可供参考。
+
+## 准备
+
+1、下载好git里的最新版本，参考[git下载安装配置](http://t.csdn.cn/FgZ7n)。
+
+2、下载nvm里的最新版本，并在nvm里安装node.js里相对较新的版本，我是16.18.0，[nvm下载](http://t.csdn.cn/ohVQW)。
+
+3、下载别人已经搭建好的个人网站再修改，下载[别人的项目](https://brucecai55520.gitee.io/bruceblog/notes/vuepress/vuepress.html#%E4%BD%93%E9%AA%8C-vuepress)的码云gitee的项目文件下载到本地。
 
 ## 体验 VuePress
 
-1. 创建并进入新目录
-
-```bash
-mkdir bruceblog
-cd bruceblog
-```
-
-2. 初始化 npm
+1. 在vscode里下载下来的项目，打开命令行，初始化 npm
 
 ```bash
 npm init
 ```
 
-3. 安装 VuePress
-
-```bash
-npm install -D vuepress
-```
-
-4. 在根目录下创建 docs 文件夹
-
-```bash
-mkdir docs
-```
-
-5. 在 docs 目录下新建 README.md 文档，并写入一些内容
-
-6. 在 `package.json` 文件添加 `scripts`
+  2.在 `package.json` 文件添加 `scripts`
 
 ```json
 {
@@ -44,13 +33,15 @@ mkdir docs
 }
 ```
 
-7. 启动本地服务器
+  3.启动本地服务器，后面就直接使用这句就行了
 
 ```bash
 npm run dev
 ```
 
-8. 浏览器打开服务器所给地址
+  4.浏览器打开服务器所给地址
+
+
 
 ## 目录结构
 
@@ -104,7 +95,7 @@ module.exports = {
   // 自定义网站 favicon
   head: [['link', { rel: 'icon', href: '/img/logo.png' }]],
   // 根路径，和仓库名一致
-  base: '/bruceblog/',
+  base: '',//!!!!!!!!把项目里的这个改为空
   // 左上角标题
   title: 'BruceBlog',
   // markdown 相关配置
@@ -275,7 +266,13 @@ style={ { key: value } }
 
 ## 部署
 
-本人选择部署到 Gitee Pages，官方只有部署到 GitHub Pages 的[教程](https://vuepress.vuejs.org/zh/guide/deploy.html)，不过也是大同小异。
+本人选择部署到 GitHub，官方只有部署到 GitHub Pages 的[教程](https://vuepress.vuejs.org/zh/guide/deploy.html)，不过也是大同小异。
+
+//建议看完b站尚硅谷里关于git和github的教程再去搞下面这个。
+
+//后面把添加到github仓库（需要仓库名为用户名+.github.io才行，再通过setting里的pages把分支设置成github pages就可以显示出链接了，就可以保存了。
+
+//以下内容非我所写
 
 1. 在 `docs/.vuepress/config.js` 中设置正确的 `base`。
 
